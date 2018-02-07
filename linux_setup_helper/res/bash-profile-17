@@ -1,0 +1,20 @@
+cowsay   "	Welcome Back [YourName]....	"
+echo
+date +\<%r\>\ %A\ -\ %B\ \<%Y\>
+# play-audio -s voice ~/sound-files/welcome.3gpp &
+updatedb
+#
+#Alias List.
+#
+alias grep='grep --colour'
+alias la='ls -a'
+alias cl='clear'
+alias install='apt install'
+alias update='apt update'/
+alias upgrade='apt upgrade'
+alias mank='man -k'
+alias lc='ls -C'
+alias ll='ls -al'
+alias lf='ls -F'
+alias rm='rm -i'
+#

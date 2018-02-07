@@ -1,0 +1,31 @@
+#!/bin/bash
+# Code By Shazza Works
+# Email; ogormanad@googlemail.com
+# Ver 2.1
+# Tool to download and dump the files from Android phone Download folder.
+# N.B. You will need to have adb installed.
+# (1) Need to *ADD* adb check and install function next v2+
+# (2) Now Done and should install when no adb on system.
+if [ ! -x /usr/bin/adb]; then
+	echo "You DON'T have ADB installed on this system"
+	echo "Installing now"
+	sleep 5
+	sudo apt-get install adb
+else
+	clear
+	echo ""
+	echo "This Tool Will Download Files From Download On Andriod Phone."
+	sleep 3
+	read -p "Have You Put Your Files In INT/Download Folder On Phone? {Y/N}" -n 1 -r
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+		sleep 3
+		echo -e "\e[35mWaiting For Device\e[0m"
+		echo -e "\e[32mPlug In And Allow Device\e[0m"
+		adb wait-for-device
+		echo -e "\e[31mDevice Ready...\e[0m"
+		adb pull /storage/emulated/0/Download .
+	else
+        	echo -e "\n\t\e[31mYou Have Canceled!!!\e[0m"
+		exit
+	fi
+fi

@@ -1,0 +1,16 @@
+mkdir ~/Apps
+mkdir ~/BAK
+mkdir ~/Code
+mkdir ~/Private
+mkdir ~/Programs
+mkdir ~/Web
+mkdir ~/Word-lists
+mkdir ~/bin
+mkdir ~/code
+mkdir ~/documents
+mkdir ~/downloads
+mkdir ~/setup-logs
+mkdir ~/sound-files
+mkdir ~/ssh
+mkdir ~ssh-backup
+mkdir ~/storage

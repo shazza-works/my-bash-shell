@@ -1,0 +1,17 @@
+PATH=/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets:~/bin
+# Put your PATH setting above !!
+PS1="[\@]\w]$"
+#
+# My Functions.
+#
+function whoson()
+{
+	ps u
+	id
+	date
+}
+
+make-key-ssh ()
+{
+  ssh-keygen -t rsa -b 5000
+{
