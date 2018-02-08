@@ -1,7 +1,6 @@
 #!/bin/bash
 # Code By Shazza Works
 # Email; ogormanad@googlemail.com
-
 seconds=0
 echo -n "Enter number of Secconds > "
 read seconds

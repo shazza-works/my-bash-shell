@@ -7,4 +7,4 @@
 #
 #------------------Right NOW test of dialog-----------------########
 
-sudo apt-get update < dialog --shadow  --clear --passwordbox Your-Password 20 40 
+sudo apt-get update < dialog --shadow  --clear --passwordbox Your-Password 20 40

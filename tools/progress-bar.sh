@@ -2,7 +2,6 @@
 # progress-bar.sh
 # Author: Dotan Barak (very minor revisions by ABS Guide author).
 # Used in ABS Guide with permission (thanks!).
-
 BAR_WIDTH=50
 BAR_CHAR_START="["
 BAR_CHAR_END="]"
@@ -10,7 +9,6 @@ BAR_CHAR_EMPTY="."
 BAR_CHAR_FULL="="
 BRACKET_CHARS=2
 LIMIT=100
-
 print_progress_bar()
 {
         # Calculate how many characters will be full.
@@ -33,7 +31,6 @@ print_progress_bar()
 
         printf "%3d%% %s" $2 ${bar_line}
 }
-
 # Here is a sample of code that uses it.
 MAX_PERCENT=100
 for ((i=0; i<=MAX_PERCENT; i++)); do
@@ -44,8 +41,5 @@ for ((i=0; i<=MAX_PERCENT; i++)); do
         print_progress_bar ${BAR_WIDTH} ${i}
         echo -en "\r"
 done
-
 echo ""
-
 exit
-

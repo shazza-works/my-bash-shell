@@ -57,8 +57,3 @@ else
 		source .servers.sh
 	fi
 fi
-
-
-
-
-

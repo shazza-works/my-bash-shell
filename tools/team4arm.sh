@@ -16,4 +16,3 @@ read -p "Enter A Password To Use? (Can Be Anything)...>" -r
 opt2=$REPLY
 espeak "Starting teamserver now....." -s 130
 teamserver $opt1 $opt2
-

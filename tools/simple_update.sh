@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 #
 # This is a simple Update and Clean Script
-# Code By Shazza Works
+# Mess By Shazza Works
 # Email; ogormanad@googlemail.com
 #------------------Right NOW run from ~/run.sh-----------------########
 apt update

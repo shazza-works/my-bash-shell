@@ -1,5 +1,5 @@
 #!/bin/bash
-# V5.0
+#
 # Code By Shazza Works
 # Email; ogormanad@googlemail.com
 # Simple talkting start servers script for MfS-Console.

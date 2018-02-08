@@ -12,4 +12,3 @@ else
 	apt install espeak -y
 	source /run.sh
 fi
-

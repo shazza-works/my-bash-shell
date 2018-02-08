@@ -1,6 +1,5 @@
 #!/bin/bash
-#								V5.01
-# Code By Shazza Works
+# Shazza Works
 # Email; ogormanad@googlemail.com
 #
 # Script to make fast use of youtube-dl by Making a list to enter urls for Download...

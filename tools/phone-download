@@ -1,11 +1,8 @@
 #!/bin/bash
 # Code By Shazza Works
 # Email; ogormanad@googlemail.com
-# Ver 2.1
 # Tool to download and dump the files from Android phone Download folder.
-# N.B. You will need to have adb installed.
-# (1) Need to *ADD* adb check and install function next v2+
-# (2) Now Done and should install when no adb on system.
+# N.B. You will need to have adb installed. Should now install when adb not on system.
 if [ ! -x /usr/bin/adb]; then
 	echo "You DON'T have ADB installed on this system"
 	echo "Installing now"
