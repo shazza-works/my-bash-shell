@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shazza Works 		V2.0
+# Shazza Works V2
 # script for getting a full list of pkg's to install
 # will try to install all of them with this sript
 echo "<>"

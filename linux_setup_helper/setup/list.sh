@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shazza Works 		V1.0
+# Shazza Works
 # Install the full list of apps for the shell if you have NET CON.
 #echo -e "{UPDATE.SH OFFLINE ATM SO NO NEW UPDATES OR UPGRADE!!}" \n
 echo "<>"

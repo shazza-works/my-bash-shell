@@ -9,7 +9,6 @@ updatedb
 #
 # Alias List.
 #
-#
 alias grep='grep --colour'
 alias la='ls -a'
 alias cl='clear'
@@ -21,7 +20,6 @@ alias lc='ls -C'
 alias ll='ls -al'
 alias lf='ls -F'
 alias rm='rm -i'
-#
 #
 # My Functions.
 #

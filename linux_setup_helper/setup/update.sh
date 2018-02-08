@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shazza Works					V1.0
+# Shazza Works
 # This is a simple Update and Clean Script
 echo -e "\e[33m"
 echo <>

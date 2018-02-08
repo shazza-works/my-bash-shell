@@ -1,8 +1,8 @@
 #!/bin/bash
-# V5.0 Shazza Works.
+# Shazza Works.
 # Simple talkting start servers script for MfS-Console.
 # Espeak to be Installed. If NOT!
-# Added Prompt for Start MSF.
+#
 echo -e "\e[33m"
 service postgresql start;
 echo -e "postgresql...............\e[32mService Started\e[0m"

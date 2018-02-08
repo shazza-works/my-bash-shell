@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shazza Works			V1.0
+# Shazza Works
 # Menu for the New-Box add-on.
 echo -e "\e[36m"
 cat res/welcome.txt

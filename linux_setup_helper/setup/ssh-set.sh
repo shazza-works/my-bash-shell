@@ -1,5 +1,5 @@
 #!/bin/bash
-# Shazza Works		V2.5
+# Shazza Works
 # SSH key setup make key pair. will remove duplicate opt
 echo "<>"
 read -p "{DO YOU WANT TO MAKE SSH KEY-SET [Y/N] }" -n 1 -r
