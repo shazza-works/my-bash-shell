@@ -20,6 +20,8 @@ git status ; sleep 3
 wait ; git add .
 wait ; git commit -m "Update-$(date)"
 wait ; git push
-https://github.com/shazza-works/$git $branch git status echo -e "\n All Tasks Done + Uploaded \n"
+https://github.com/shazza-works/$git $branch
+git status
+echo -e "\n All Tasks Done + Uploaded \n"
 
 echo -e "\n\n\n\n\t Thanks For Using Another Shazza Tool; \n"
