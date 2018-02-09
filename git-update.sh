@@ -3,9 +3,9 @@
 # Shazza-Works						#
 # Update Script To Push My Git Files			#
 ########################################################
-export home=$HOME
-export bash=$BASH
-export gits=$home/GIT-HUB/
+export home="$HOME"
+export bash="$BASH"
+export gits="£$home/GIT-HUB/"
 clear
 #=======================================================#
 printf "\n What Git Are You Updating? \n"
