@@ -4,10 +4,13 @@
 # Update Script To Push My Git Files			#
 ########################################################
 export home=$HOME
+export bash=$BASH
 clear
-ls $home/GIT-HUB/
+ls .
 read -p "What Git Are You Updating; " -r thegit
+cd $thegit  ; ls
 read -p "What Branch Do You Want To Use [Def=master]; " -r branch
+echo -e "\n $branch Selected... \n"
 git status ; sleep 2
 git add . ; wait
 git commit -m "My-New-Update-$(date)"
