@@ -1,8 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
-#
-# This is a simple Update and Clean Script
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
+#########################################################
+# This is a simple Update and Clean Script		#
+# Code By Shazza Works					#
+# Email; ogormanad@googlemail.com			#
+#########################################################
 apt update
 if [ $? = 0 ]; then
 	echo

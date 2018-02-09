@@ -1,9 +1,11 @@
 #!/bin/bash
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
-# 20-11-2017
-# Simple Bash To Fix Wi-Fi Card After Sniff & Crack.
-#
+#########################################################################
+# Code By Shazza Works							#
+# Email; ogormanad@googlemail.com					#
+# 20-11-2017								#
+# Simple Bash To Fix Wi-Fi Card After Sniff & Crack.			#
+#########################################################################
+
 echo -e "\e[36m"
 cat /root/hs/bash/NO-MOVE-BANNERS/Program-Banner-DONT-Move
 echo -e "\e[33m"

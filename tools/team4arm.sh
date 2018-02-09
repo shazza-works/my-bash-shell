@@ -1,7 +1,9 @@
 #!/bin/bash
-# Shazza Works V1.00
-# Simple addon to the server start script this one brings up the
-# teamserver for use with amitage application.
+#########################################################################
+# Shazza Works V1.00							#
+# Simple addon to the server start script this one brings up the	#
+# teamserver for use with amitage application.				#
+#########################################################################
 echo -e "\e[33m"
 opt1=''
 opt2=''

@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash
-#
-# This is a simple Update and Clean Script
-# Mess By Shazza Works
-# Email; ogormanad@googlemail.com
-#------------------Right NOW run from ~/run.sh-----------------########
+#################################################################
+# This is a simple Update and Clean Script			#
+# Mess By Shazza Works						#
+# Email; ogormanad@googlemail.com				#
+#--------------Right NOW run from ~/run.sh------------###########
 apt update
 if [ $? = 0 ]; then
 	echo

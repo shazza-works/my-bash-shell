@@ -1,7 +1,9 @@
 #!/bin/bash
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
-# Script to install Espaek on the system if it is not already
+#########################################################################
+# Code By Shazza Works							#
+# Email; ogormanad@googlemail.com					#
+# Script to install Espaek on the system if it is not already		#
+#########################################################################
 echo "You Don't Have Espeak Installed....... Doing It Now..."
 echo "10...9...8...7...6...5...4...3..."
 sleep 10

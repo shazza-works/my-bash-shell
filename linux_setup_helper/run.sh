@@ -1,6 +1,8 @@
 #!/bin/bash
-# Shazza Works.
-# MAIN Menu for server start and tools app.
+#################################################
+# Shazza Works.					#
+# MAIN Menu for server start and tools app.	#
+#################################################
 echo -e "\e[33m"
 clear
 if [ -x /usr/bin/espeak ]; then

@@ -1,9 +1,10 @@
 #!/bin/bash
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
-# Stop Server MfS-Console.
-# Added Prompt for Start MSF.
-
+#################################################
+# Code By Shazza Works				#
+# Email; ogormanad@googlemail.com		#
+# Stop Server MfS-Console.			#
+# Added Prompt for Start MSF.			#
+#################################################
 service postgresql stop;
 echo
 echo "Postgresql.............Killed...!"

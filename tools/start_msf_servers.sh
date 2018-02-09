@@ -1,9 +1,11 @@
 #!/bin/bash
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
-# Simple talkting start servers script for MfS-Console.
-# Espeak to be Installed. If NOT!
-# Added Prompt for Start MSF.
+#########################################################################
+# Code By Shazza Works							#
+# Email; ogormanad@googlemail.com					#
+# Simple talkting start servers script for MfS-Console.			#
+# Espeak to be Installed. If NOT!					#
+# Added Prompt for Start MSF.						#
+#########################################################################
 clear
 if [ -x /usr/bin/espeak ]; then
 espeak "What Would You Like To Do. Choose an option?" -s 140

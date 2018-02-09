@@ -1,6 +1,8 @@
 #!bin/bash
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
+#########################################
+# Code By Shazza Works			#
+# Email; ogormanad@googlemail.com	#
+#########################################
 echo "My Name is Shazza"
 sleep 5
 clear

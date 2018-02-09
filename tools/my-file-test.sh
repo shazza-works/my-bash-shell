@@ -1,6 +1,9 @@
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
-# This script gives information about a file.
+#!/usr/bin/bash
+#######################################################
+# Code By Shazza Works				      #
+# Email; ogormanad@googlemail.com		      #
+# This script gives information about a file.	      #
+#######################################################
 FILENAME="$1"
 echo "Properties for $FILENAME:"
 if [ -f $FILENAME ]; then

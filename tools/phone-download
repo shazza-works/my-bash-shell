@@ -1,8 +1,11 @@
 #!/bin/bash
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
-# Tool to download and dump the files from Android phone Download folder.
-# N.B. You will need to have adb installed. Should now install when adb not on system.
+######################################################################################
+# Code By Shazza Works								     #
+# Email; ogormanad@googlemail.com						     #
+# Tool to download and dump the files from Android phone Download folder.	     #
+# N.B. You will need to have adb. Should now install when adb not on system.	     #
+######################################################################################
+
 if [ ! -x /usr/bin/adb]; then
 	echo "You DON'T have ADB installed on this system"
 	echo "Installing now"

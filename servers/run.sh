@@ -1,7 +1,9 @@
 #!/bin/bash
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
-# MAIN Menu for server start and tools app.
+#########################################################
+# Code By Shazza Works					#
+# Email; ogormanad@googlemail.com			#
+# MAIN Menu for server start and tools app.		#
+#########################################################
 clear
 if [ -x /usr/bin/espeak ]; then
 espeak "What Would You Like To Do. Choose an option?" -s 130

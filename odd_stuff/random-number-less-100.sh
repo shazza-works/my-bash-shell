@@ -1,8 +1,10 @@
 #!/bin/bash
-# Code By Shazza Works
-# Email; ogormanad@googlemail.com
-# Random number-gen with options
-# Will show '+' when over 100 and 'Hit' when under
+#################################################################
+# Code By Shazza Works						#
+# Email; ogormanad@googlemail.com				#
+# Random number-gen with options				#
+# Will show '+' when over 100 and 'Hit' when under		#
+#################################################################
 while true
 do
 ran=$RANDOM

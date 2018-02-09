@@ -1,11 +1,12 @@
 #!/bin/bash
-# Shazza Works
-# Email; ogormanad@googlemail.com
-#
-# Script to make fast use of youtube-dl by Making a list to enter urls for Download...
-# if any of the Vids ERROR out and your not around this script will auto remove the url
-# that caused the problem and try to GET the rest of the url list.
-#
+#################################################################################
+# Shazza Works									#
+# Email; ogormanad@googlemail.com						#
+# Script to make fast use of youtube-dl by Making a list to enter urls#		#
+# for Download... if any of the Vids ERROR out and your not around this		#
+# script will auto remove the url that caused the problem and try		#
+# to GET the rest of the url list.						#
+#################################################################################
 echo -e "\e[33m"
 clear
 echo "Past Your URL's Below" > logs/url-888 && nano logs/url-888

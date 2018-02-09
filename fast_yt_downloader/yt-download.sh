@@ -1,14 +1,13 @@
 #!/bin/bash
-#								V5.01
-# Code By Shazza Works
-#
-# Script to make fast use of youtube-dl by Making a list to enter urls for Download...
-# if any of the Vids ERROR out and your not around this script will auto remove the url
-# that caused the problem and try to GET the rest of the url list.
-#
-# Need to add file remover for the left over .part files that had errors
-# and have been getting left in the folder. keep for V4.0
-#
+#########################################################################
+# Code By Shazza Works							#
+# Script to make fast use of youtube-dl by Making a list to enter	#
+# urls for Download... if any of the Vids ERROR out and your not	#
+# around this script will auto remove the url that caused the		#
+# problem and try to GET the rest of the url list. Need to add file	#
+# remover for the left over. part files that had errors			#
+# and have been getting left in the folder. keep for V4.0		#
+#########################################################################
 echo -e "\e[33m"
 clear
 echo "Past Your URL's Below" > logs/url-888 && nano logs/url-888

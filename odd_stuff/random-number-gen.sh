@@ -1,7 +1,12 @@
-###########################################################################
-# Shellscript: rand - return random number Author : Heiner Steven <heiner.steven@odn.de> Date : 1995-09-02 Requires : bc, od Category : Desktop SCCS-Id.  
-# : @(#) rand 1.9 04/02/18
-##########################################################################
+#!/bin/bash
+#
+# WILL GET TO SORTING THIS IN THE END !!
+#
+#########################################################################
+# Shellscript: rand - return random number Author			#
+# Heiner Steven <heiner.steven@odn.de> Date : 1995-09-02 Requires	#
+# bc, od Category : Desktop SCCS-Id. : @(#) rand 1.9 04/02/18		#
+#########################################################################
 # Description
 #    o	Prints a random number. Uses existing /dev/urandom for good
 #	random numbers, otherwise date and time is used.
