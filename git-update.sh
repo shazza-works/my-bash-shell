@@ -5,7 +5,7 @@
 ########################################################
 export home="$HOME"
 export bash="$BASH"
-export gits="£$home/GIT-HUB/"
+export gits="$home/GIT-HUB/"
 clear
 #=======================================================#
 printf "\n What Git Are You Updating? \n"
