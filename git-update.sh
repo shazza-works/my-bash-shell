@@ -9,6 +9,7 @@ export gits=$home/GIT-HUB/
 clear
 #=======================================================#
 printf "\n What Git Are You Updating? \n"
+ls .
 select file in $gits/* ; do
 test -n "$file" && break; echo ">>> Invalid Selection";
 git=$fine
