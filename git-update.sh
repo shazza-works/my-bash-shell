@@ -12,7 +12,7 @@ printf "\n What Git Are You Updating? \n"
 ls .
 select file in $gits/* ; do
 test -n "$file" && break; echo ">>> Invalid Selection";
-git=$fine
+git=$file
 done
 #=======================================================#
 read -p "What Branch Do You Want To Use [Def=master]; " -r branch
