@@ -20,8 +20,7 @@ echo -e "\n $branch Selected... \n"
 git status ; sleep 3
 wait ; git add .
 wait ; git commit -m "Update-$(date)"
-wait ; git push
-https://github.com/shazza-works/$git $branch
+wait ; git push https://github.com/shazza-works/$git $branch
 git status
 echo -e "\n All Tasks Done + Uploaded \n"
 
