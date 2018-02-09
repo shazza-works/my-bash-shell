@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/env bash
 #########################################################
 # Shazza-Works						#
 # Update Script To Push My Git Files			#
@@ -15,7 +15,7 @@ echo -e "\n $branch Selected... \n"
 git status ; sleep 3
 git add .
 git commit -m "Update-$(date)"
-git push https://github.com/shazza-works/$file $branch
+git push https://github.com/shazza-works/$gits $branch
 git status
 echo -e "\n All Tasks Done + Uploaded \n"
 echo -e "\n\n\n\n\t Thanks For Using Another Shazza Tool; \n"
