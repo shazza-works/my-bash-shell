@@ -1,10 +1,11 @@
+#!/bin/bash
 #!/data/data/com.termux/files/usr/bin/env bash
 #########################################################
 # Shazza-Works						#
 # Update Script To Push My Git Files			#
 #########################################################
-
-gits=$HOME/GIT-HUB/
+export home=$HOME
+export gits=$HOME/GIT-HUB/
 clear
 echo "PWD IS $pwd"
 printf "\n What Git Are You Updating? \n"
