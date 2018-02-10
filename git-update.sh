@@ -1,8 +1,9 @@
-#!/bin/bash
 #!/data/data/com.termux/files/usr/bin/env bash
 #########################################################
 # Shazza-Works						#
 # Update Script To Push My Git Files			#
+# NB...							#
+# To use just move to a GIT ROOT dir and run.. enjoy    #
 #########################################################
 export home=$HOME
 clear
@@ -19,4 +20,4 @@ wait ; git add .
 wait ; git commit -m "Update-$(date)"
 wait ; git push https://github.com/shazza-works/$github $branch
 echo -e "\n All Tasks Done + Uploaded \n"
-echo -e "\n\n\n\n\t Thanks For Using Another Shazza Tool; \n"
+echo -e "\n\n\n\n\t <<<Thanks For Using Another Shazza Tool>>> \n"
