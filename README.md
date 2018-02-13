@@ -1,10 +1,8 @@
-#My-Bash-Shell + Help
+# My-Bash-Shell + Help
 
 - Selection Of My Shell Scripts I Find Often Help With Several Tasks. This is the stuff I use often and I 
 know it saves me time so I am offering whatever I make here for Every One So...
-@Enjoy.
-
-#Bash scripting cheatsheet
+# @Enjoy.
 
 - Bash Shell Examples And Help
 
