@@ -1,0 +1,62 @@
+#!/data/data/com.termux/files/usr/bin/env bash
+##################################################################################
+# Shazza-Works									 #
+# Update Script To Push My Git Files						 #
+# NB...										 #
+# To use just move to a GIT ROOT dir and run.. enjoy    			 #
+##################################################################################
+
+# add mkdir for home Git if not there
+	#ask user to name new one??
+	# if git not there mk new git and init
+	# NB. will need to change (select string) (push sting) with preset var's
+# 
+export home="$HOME"
+proto="SSH HTTPS EXIT"
+clear
+select answ in $proto; do
+if [ $answ == "HTTPS" ]; then
+	echo "PWD IS $PWD"
+	printf "\n What Git Are You Updating? \n"
+	select file in $HOME/GIT-HUB/*; do
+	test -n "$file" && break ; echo ">>> Invalid Selection";
+	done
+	github=$(basename "$file")
+	read -p "What Branch Do You Want To Use [Def=master]; " -r branch
+	echo -e "\n Branch $branch Selected... \n"
+	git status; sleep 3
+	git add . ; git commit -m "Changed_On_$(date)"
+	wait; git push https://github.com/shazza-works/$github $branch
+	echo -e "\n All Tasks Done + Uploaded \n"
+	echo -e "\n\n\n\n\t <<<Thanks For Using Another Shazza Tool>>> \n"
+	break
+elif [ $answ == "SSH" ]; then
+	echo -e "SSH key's will be added to the agent or made!"
+	if [ -f "$home/.ssh/id_rsa" ];then
+		eval `ssh-agent -s` ; ssh-add
+	else
+		echo "temp note key-make"
+		ssh-keygen -t rsa -b 4096
+		eval `ssh-agent -s` ; ssh-add
+	fi
+	echo "PWD IS $PWD"
+	printf "\n What Git Are You Updating? \n"
+	select file in $HOME/GIT-HUB/* ; do
+		test -n "$file" && break ; echo ">>> Invalid Selection";
+	done
+	github=$(basename "$file")
+	read -p "What Branch Do You Want To Use [Def=master]; " -r branch
+	echo -e "\n Branch $branch Selected... \n"
+	git status; sleep 3
+	git add . ; git commit -m "Changed_On_$(date)"
+	wait; git push ssh://git@github.com/shazza-works/$github $branch
+	eval `ssh-agent -k`
+	echo -e "\n All Tasks Done + Uploaded \n"
+	echo -e "\n\n\n\n\t <<<Thanks For Using Another Shazza Tool>>> \n"
+	break
+elif [ $answ == "EXIT" ]; then
+	break && exit
+else
+		echo -e "\nPlease Try Again...\n"
+fi
+done
