@@ -1,6 +1,7 @@
 # This script will use termux api to get contacts list in json
-# it then edits the strings and removes numbers that are less than 11
-# digits printing the error msg if not 11 and saving the rest to file
+# it then edits the strings and removes numbers that are less than 10 or 11
+# digits printing the error msg if not 10 or 11 and saving the rest to file
+# the 10 digit numbers are padded with a trailing '0'
 add='0'
 list=`termux-contact-list`;
 echo $list | jq '.[] | .number' | tr -d '-' | tr -s '+44' '0' | tr -d ' ' | tr -d '"' > tmp-nums-lst;
