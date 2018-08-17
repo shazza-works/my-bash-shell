@@ -4,8 +4,20 @@
 # add a number read opt [done]
 # add a hold time for sleep [done]
 # fix a contact jq call using name and menu select for return [done]
+echo -e "\e[1m\e[35m+++++++++++++++++++++++++++++++++++++\e[21m"
+echo -e "\e[1m+ Usage; bash sms-flood.sh          +\e[21m"
+echo -e "\e[1m+ Select Y=Yes................[Yy]  +\e[21m"
+echo -e "\e[1m+ Type few name letters.......[TxT] +\e[21m"
+echo -e "\e[1m+ Select Your Number..........[API] +\e[21m"
+echo -e "\e[1m+ Type MsG to flood with......[TxT] +\e[21m"
+echo -e "\e[1m+ Enter How Many To Send........[N] +\e[21m"
+echo -e "\e[1m+ Enter 'sleep' number..........[N] +\e[21m"
+echo -e "\e[1m+ N.B.(sleep is time between sends) +\e[21m"
+echo -e "\e[1m+++++++++++++++++++++++++++++++++++++\e[21m"
+echo -e "\e[39m"
 function flood_number() {
 read -p "Search Contacts For A Number? [y/n]" -n 1 -r
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 	read -p "Enter Name Search> " auto
 	IFS=$'\n'
@@ -13,10 +25,14 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 		number=`termux-contact-list | jq '.[] | select(.name == '$name') | .number '`
 		num=`echo $number | awk '{ print $1 }'`
 		break
+	IFS=$'\ '
 	done
+	echo -e "Using...\e[31m"$num"\e[0m"
 	echo ""
 	read -p "Please Type A Msg To Flood With> " msg
+	echo
 	read -p "How Many Msg's To Send> " count
+	echo
 	read -p "Set Sleep Time> " sleep
 	while [ $count -gt 0 ]; do
 		termux-sms-send -n $num $msg
@@ -26,9 +42,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	done
 	echo -e "\n\e[31mMission Completed Boss!!\n\e[0m"
 else
+	echo -e "\n"
 	read -p "Enter Mobile Number To Flood> " number
+	echo
 	read -p "Please Type A Msg To Flood With> " msg
+	echo
 	read -p "How Many Msg's To Send> " count
+	echo
 	read -p "Set Sleep Time> " sleep
 	while [ $count -gt 0 ]; do
 	        termux-sms-send -n $number $msg
