@@ -10,7 +10,7 @@
 	#ask user to name new one??
 	# if git not there mk new git and init
 	# NB. will need to change (select string) (push sting) with preset var's
-# 
+#NEED TO ADD ASK USER FOR USERNAME OF ACT.....!!!! YOU NEED TO CHANGE 
 export home="$HOME"
 proto="SSH HTTPS EXIT"
 clear

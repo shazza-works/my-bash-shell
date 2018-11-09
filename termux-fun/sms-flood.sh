@@ -58,6 +58,7 @@ else
 	done
 	echo ""
 	echo -e "\n\e[31mMission Completed Boss!!\n\e[0m"
+	echo -e "Flood Sent TO SMS Number"
 fi
 }
 
