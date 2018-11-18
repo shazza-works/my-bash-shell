@@ -5,12 +5,19 @@
 # NB...										 #
 # To use just move to the ROOT dir with Gits and run.. enjoy                     #
 ##################################################################################
-
 # add mkdir for home Git if not there
 	#ask user to name new one??							[N]
 	# if git not there mk new git and init						[N]
 	# NB. will need to change (select string) (push sting) with preset var's	[Y]done
 #NEED TO ADD ASK USER FOR USERNAME OF ACT.....!!!! YOU NEED TO CHANGE			[Y]done
+echo ""
+echo -e "\e[91m ____ _ ___          ___  ___  ____ ___ ____     "
+echo -e "\e[91m | __ |  |  __  |  | |__] |  \ |__|  |  |___     "
+echo -e "\e[91m |__] |  |      |__| |    |__/ |  |  |  |___ V3.0"
+echo -e "\e[92m                   Shazza-Works... \e[39m"
+echo ""
+sleep 3
+
 pwd="$PWD/"
 proto="SSH HTTPS EXIT"
 clear
