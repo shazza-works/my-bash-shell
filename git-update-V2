@@ -28,9 +28,13 @@ if [ $answ == "HTTPS" ]; then
 	git status; sleep 3
 	git add . ; git commit -m "Changed_On_$(date)"
 	wait; git push https://github.com/$username/$github $branch
-	echo -e "\n All Tasks Done + Uploaded \n"
-	echo -e "\n\n\n\n\t <<<Thanks For Using Another Shazza Tool>>> \n"
-	break
+	if [[ $? = 0 ]]; then
+		echo -e "\n All Tasks Done + Uploaded \n"
+		echo -e "\n\n\n\n\t <<<Thanks For Using Another Shazza Tool>>> \n"
+		break
+	else
+		echo -e " SOMETHING SHIT HAPPENED READ ABOVE ^^^ "
+	fi
 elif [ $answ == "SSH" ]; then
 	read -p "What is your GitHub UserName> " -r username
 	echo -e "SSH key's will be added to the agent or made!"
@@ -52,10 +56,14 @@ elif [ $answ == "SSH" ]; then
 	git status; sleep 3
 	git add . ; git commit -m "Changed_On_$(date)"
 	wait; git push ssh://git@github.com/$username/$github $branch
-	eval `ssh-agent -k`
-	echo -e "\n All Tasks Done + Uploaded \n"
-	echo -e "\n\n\n\n\t <<<Thanks For Using Another Shazza Tool>>> \n"
-	break
+	if [[ $? -eq 0 ]]; then
+		eval `ssh-agent -k`
+		echo -e "\n All Tasks Done + Uploaded \n"
+		echo -e "\n\n\n\n\t <<<Thanks For Using Another Shazza Tool>>> \n"
+		break
+	else
+		echo -e " SOMETHING SHIT HAPPENED READ ABOVE ^^^ "
+	fi
 elif [ $answ == "EXIT" ]; then
 	break && exit
 else
