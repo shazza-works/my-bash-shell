@@ -19,7 +19,7 @@ if [ $answ == "HTTPS" ]; then
 	echo "PWD IS $PWD"
 	read -p "What is your GitHub UserName> " -r username
 	printf "\n What Git Are You Updating? \n"
-	select file in $HOME/GIT-HUB/*; do
+	select file in ../*; do
 	test -n "$file" && break ; echo ">>> Invalid Selection";
 	done
 	github=$(basename "$file")
