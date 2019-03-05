@@ -32,7 +32,7 @@ if [ $answ == "HTTPS" ]; then
 	github=$(basename "$file")
 	read -p "What Branch Do You Want To Use [Def=master]> " -r branch
 	echo -e "\n Branch $branch Selected... \n"
-	git --git-dir=$file/.git --work-tree=$file/ status; sleep 3
+	git --git-dir=$file/.git --work-tree=$file/ status; sleep 2
 	git --git-dir=$file/.git --work-tree=$file/ add . ; git --git-dir=$file/.git --work-tree=$file/ commit -m "Changed_On_$(date)"
 	wait; git --git-dir=$file/.git --work-tree=$file/ push https://github.com/$username/$github $branch
 	if [[ $? = 0 ]]; then
