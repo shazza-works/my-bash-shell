@@ -5,7 +5,7 @@
 clear
 echo -e "\nThis tool will setup some of the more handny tools on termux. \nPlus setup the storage..\n"
 echo "starting in 5 Sec... "; sleep 10
-pkg update --yes ; pkg install termux-api tree python* python-dev jq dnsutils termux-tools mlocate nmap nano git curl lynx wget
+pkg update --yes ; pkg install --yes termux-api tree python* python-dev perl fish jq dnsutils termux-tools mlocate nmap nano git curl lynx wget file screenfetch
 pkg update
 termux-setup-storage
 echo -e "alias cl='clear'\n" > $HOME/.bash_profile
