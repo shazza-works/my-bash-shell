@@ -14,5 +14,7 @@ echo -e "screenfetch\n" >> $HOME/.bash_profile
 echo -e "Removing (Nasty) MotD msg\n"
 echo '' > /data/data/com.termux/files/usr/etc/motd
 echo -e "\n\nYou need to Re-Start your termux with Ctl-D \n"
+echo -e "\n\nSetting Python PATH for termux"
+echo "export /data/data/com.termux/files/usr/lib/python2.7/site-packages/:/data/data/com.termux/files/usr/lib/python3.7/site-packages/" >> $HOME/.bash_profile
 sleep 3
 exit
