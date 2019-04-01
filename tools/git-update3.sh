@@ -10,6 +10,8 @@
 	# if git not there mk new git and init						[N]
 	# NB. will need to change (select string) (push sting) with preset var's	[Y]done
 #NEED TO ADD ASK USER FOR USERNAME OF ACT.....!!!! YOU NEED TO CHANGE			[Y]done
+# ONLY TIME WON'T WORK IS IS YOU HAVE NOT SET; $ git config --global user.email "ogormanad@googlemail.com"
+# and the $ git config --global user.name "Shazza-Works"
 echo ""
 echo -e "\e[91m ____ _ ___          ___  ___  ____ ___ ____     "
 echo -e "\e[91m | __ |  |  __  |  | |__] |  \ |__|  |  |___     "
@@ -17,7 +19,7 @@ echo -e "\e[91m |__] |  |      |__| |    |__/ |  |  |  |___ V3.0"
 echo -e "\e[92m                   Shazza-Works... \e[39m"
 echo ""
 sleep 3
-
+home=$HOME
 pwd="$PWD/"
 proto="SSH HTTPS EXIT"
 clear
@@ -29,10 +31,11 @@ if [ $answ == "HTTPS" ]; then
 	select file in $pwd/*; do
 	test -n "$file" && break ; echo ">>> Invalid Selection";
 	done
+	echo "$file" "TEST" ; sleep 5
 	github=$(basename "$file")
 	read -p "What Branch Do You Want To Use [Def=master]> " -r branch
 	echo -e "\n Branch $branch Selected... \n"
-	git --git-dir=$file/.git --work-tree=$file/ status; sleep 2
+	git --git-dir=$file/.git --work-tree=$file/ status; sleep 3
 	git --git-dir=$file/.git --work-tree=$file/ add . ; git --git-dir=$file/.git --work-tree=$file/ commit -m "Changed_On_$(date)"
 	wait; git --git-dir=$file/.git --work-tree=$file/ push https://github.com/$username/$github $branch
 	if [[ $? = 0 ]]; then
