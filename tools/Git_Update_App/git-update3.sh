@@ -3,7 +3,7 @@
 # Shazza-Works						V3.0			 #
 # Update Script To Push My Git Files						 #
 # NB...										 #
-# To use just move to the ROOT dir with Gits and run.. enjoy                     #
+# To use just move to the ROOT dir with Gits and run..      <Last_Edit_10/6/19>  #
 ##################################################################################
 # add mkdir for home Git if not there
 	#ask user to name new one??							[N]
@@ -16,40 +16,44 @@ echo ""
 echo -e "\e[91m ____ _ ___          ___  ___  ____ ___ ____     "
 echo -e "\e[91m | __ |  |  __  |  | |__] |  \ |__|  |  |___     "
 echo -e "\e[91m |__] |  |      |__| |    |__/ |  |  |  |___ V3.0"
-echo -e "\e[92m                   Shazza-Works... \e[39m"
+echo -e "							"
+echo -e "\e[92m                  Shazza-Works...🐂🐂	  \e[39m"
 echo ""
 sleep 3
 home=$HOME
 pwd="$PWD/"
 proto="SSH HTTPS EXIT"
 clear
+echo -e "\n\n"
+read -p "What is your GitHub UserName ❓> " -r username
+echo -e "\n"
 select answ in $proto; do
 if [ $answ == "HTTPS" ]; then
 	echo "PWD IS $PWD"
-	read -p "What is your GitHub UserName❓> " -r username
-	printf "\n What Git Are You Updating? \n"
+	printf "\n Which Git Are You Updating ❓> "
 	select file in $pwd/*; do
-	test -n "$file" && break ; echo ">>> Invalid Selection";
+	test -n "$file" && break ; echo "> ⛔ Invalid Selection ⛔ <";
 	done
 	echo "$file" "TEST" ; sleep 5
 	github=$(basename "$file")
-	read -p "What Branch Do You Want To Use [Def=master]❓> " -r branch
+	read -p "What Branch Do You Want To Use [Def=master] ❓> " -r branch
 	echo -e "\n Branch $branch Selected...✅\n"
 	git --git-dir=$file/.git --work-tree=$file/ status; sleep 3
-	git --git-dir=$file/.git --work-tree=$file/ add . ; git --git-dir=$file/.git --work-tree=$file/ commit -m "Changed_On_$(date)"
+	git --git-dir=$file/.git --work-tree=$file/ add . ; git --git-dir=$file/.git --work-tree=$file/ commit -m "Updated_On_$(date)"
 	wait; git --git-dir=$file/.git --work-tree=$file/ push https://github.com/$username/$github $branch
 	if [[ $? = 0 ]]; then
 		echo -e "\n All Tasks Done + Uploaded ✅✅✅\n"
 		echo -e "\n\n\n\n\t <Thanks For Using>\n"
-		break
+		# break <><>
 	else
-		echo -e " ❌❌❌__SOMETHING SHIT HAPPENED READ ABOVE__❌❌❌ "
+		echo -e "\n\n\t ❌❌❌__SOMETHING SHIT HAPPENED READ ABOVE__❌❌❌ \n"
 	fi
 elif [ $answ == "SSH" ]; then
-	read -p "What is your GitHub UserName ❓> " -r username
+	#read -p "What is your GitHub UserName ❓> " -r username
 	echo -e "SSH key's will be added to the agent or made!"
-	if [ -f "$home/.ssh/id_rsa" ];then
-		eval `ssh-agent -s` ; ssh-add
+	if [ -e "$home/.ssh/id_rsa" ]; then
+		#eval `ssh-agent -s` ; ssh-add
+		echo -e "Key Found ✅\n"
 	else
 		echo "temp note key-make"
 		ssh-keygen -t rsa -b 4096
@@ -58,11 +62,11 @@ elif [ $answ == "SSH" ]; then
 	echo "PWD IS $PWD"
 	printf "\n What Git Are You Updating ❓\n"
 	select file in $pwd/* ; do
-		test -n "$file" && break ; echo ">>> ❌ Invalid Selection";
+		test -n "$file" && break ; echo "> ⛔ Invalid Selection ⛔ <";
 	done
 	github=$(basename "$file")
 	read -p "What Branch Do You Want To Use [Def=master]> " -r branch
-	echo -e "\n Branch $branch Selected... \n"
+	echo -e "\n Branch $branch Selected...✅\n"
 	git --git-dir=$file/.git --work-tree=$file/ status; sleep 3
 	git --git-dir=$file/.git --work-tree=$file/ add . ; git --git-dir=$file/.git --work-tree=$file/ commit -m "Changed_On_$(date)"
 	wait; git --git-dir=$file/.git --work-tree=$file/ push ssh://git@github.com/$username/$github $branch
@@ -70,9 +74,9 @@ elif [ $answ == "SSH" ]; then
 		eval `ssh-agent -k`
 		echo -e "\n All Tasks Done + Uploaded ✅✅✅\n"
 		echo -e "\n\n\n\n\t <Thanks For Using>\n"
-		break
+		# break <><>
 	else
-		echo -e " ❌❌❌__SOMETHING SHIT HAPPENED READ ABOVE__❌❌❌"
+		echo -e "\n\n\t ❌❌❌__SOMETHING SHIT HAPPENED READ ABOVE__❌❌❌ \n"
 	fi
 elif [ $answ == "EXIT" ]; then
 	break && exit
