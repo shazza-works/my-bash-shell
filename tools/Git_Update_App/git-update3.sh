@@ -44,18 +44,16 @@ if [ $answ == "HTTPS" ]; then
 	if [[ $? = 0 ]]; then
 		echo -e "\n All Tasks Done + Uploaded ✅✅✅\n"
 		echo -e "\n\n\n\n\t <Thanks For Using>\n"
-		# break <><>
 	else
 		echo -e "\n\n\t ❌❌❌__SOMETHING SHIT HAPPENED READ ABOVE__❌❌❌ \n"
 	fi
 elif [ $answ == "SSH" ]; then
-	#read -p "What is your GitHub UserName ❓> " -r username
 	echo -e "SSH key's will be added to the agent or made!"
 	if [ -e "$home/.ssh/id_rsa" ]; then
-		#eval `ssh-agent -s` ; ssh-add
 		echo -e "Key Found ✅\n"
 	else
-		echo "temp note key-make"
+		echo -e "\n\t⛏⛏⛏ YOU NEED TO COPY YOUR SSH.PUB KEY TO SETTINGS ON GITHUB ⛏⛏⛏\n"
+		sleep 4
 		ssh-keygen -t rsa -b 4096
 		eval `ssh-agent -s` ; ssh-add
 	fi
@@ -74,7 +72,6 @@ elif [ $answ == "SSH" ]; then
 		eval `ssh-agent -k`
 		echo -e "\n All Tasks Done + Uploaded ✅✅✅\n"
 		echo -e "\n\n\n\n\t <Thanks For Using>\n"
-		# break <><>
 	else
 		echo -e "\n\n\t ❌❌❌__SOMETHING SHIT HAPPENED READ ABOVE__❌❌❌ \n"
 	fi
