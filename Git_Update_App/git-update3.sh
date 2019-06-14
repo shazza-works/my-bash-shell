@@ -19,6 +19,7 @@ echo -e "\e[91m |__] |  |      |__| |    |__/ |  |  |  |___ V3.0"
 echo -e "							"
 echo -e "\e[92m                  Shazza-Works...🐂🐂	  \e[39m"
 echo ""
+
 sleep 3
 home=$HOME
 pwd="$PWD/"
