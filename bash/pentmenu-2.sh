@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # not my code/....,
 # Code BY ---> GinjaChris / pentmenu
 # --------------------------------------

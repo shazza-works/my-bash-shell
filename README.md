@@ -1,4 +1,4 @@
-# My-Bash-Shell + Help
+# Linux + Help
 
 - Selection Of My Shell Scripts I Find Often Help With Several Tasks. This is the stuff I use often and I 
 know it saves me time so I am offering whatever I make here for Every One So...

@@ -1,3 +1,4 @@
+#!/bin/bash
 # this is a list downloader
 for i in `cat list`
 do

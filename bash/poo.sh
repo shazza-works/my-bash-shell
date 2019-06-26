@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ans1=`expr 1 \* 4 + 1`
 echo 'answer 1 =' $ans1
 ans2=`expr 2 \* 5 + 2`

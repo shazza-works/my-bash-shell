@@ -1,3 +1,5 @@
+#!/bin/bash
+
 while getopts ":ht" opt; do
   case ${opt} in
     h ) # process option a

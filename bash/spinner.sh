@@ -1,3 +1,4 @@
+#!/bin/bash
 i=1
 sp="/ ¬ \ |"
 echo -n ' '

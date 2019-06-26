@@ -1,16 +1,32 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 # Shazza-Works 🐂🐂🐂
-# Simple Wrapper for the openSSL
+# Simple Wrapper for the 'openSSL'
 # Made to encrypt files in the tree easy with
 # choice of algos to use
-# V1.0
+# 'V1.0'
+## >>>>> THIS IS FOR ARM - 'ANDROID' <<<<<
+#
+# Do CHECK FOR OPENSSL MAY NOT BE INSTALLED? SE WHAT SIZE IT IS AS WELL +++
 # +++++++
-## Do CHECK FOR OPENSSL MAY NOT BE INSTALLED? SE WHAT SIZE IT IS AS WELL +++
-## TREE ALSO FOR RECURS OPT---  tree -ifR full dir -r print with long fn
-## MAKE INSTALL OPTION AND MOVE IT TO /USR/BIN AND INSTALL TOOLS NEEDED!
-# +++++++
+#
+#
+#		NO ZENITY ON DROID CHANGE
+#	TERMUX to use '$PREFIX' == '/data/data/com.termux/files/usr'
+#				just add 'BIN'
+#
+
+#### ARE WE 'ANDROID' ####
+if [ $(uname -o) = "Android" ]; then
+	echo
+else
+	clear
+	echo -e "\n\\n\n\t\t\t!! [ERROR: THIS Shazza-File WAS MADE FOR ANDROID] !!"
+	echo -e "\t\t\t\tRUN GNU/Linux Shazza-File ON HERE THANKS\n\n\n"
+	exit
+fi
+
 if [[ $1 == "--remove" ]]; then
-	rm -rf /usr/bin/shazzafile
+	rm -rf $PREFIX/bin/shazzafile
 	echo -e "\t\t\n Shazza-File Has Now Been REMOVED!"
 	echo -e "\nEnter..."
 	read -r
@@ -18,32 +34,22 @@ if [[ $1 == "--remove" ]]; then
 fi
 
 if [[ $1 == "--install" ]]; then
-	cp shazzafile /usr/bin/
-	cat README.md | zenity --text-info --checkbox="I GOT IT SHAZZA"
+	cp shazzafile $PREFIX/bin/
+	less -e  README.md
 	echo -e "\t\t\n Now Installed just use with (shazzafile) from the shell"
 	echo -e "\nEnter..."
 	read -r
 fi
 
-if [ ! -e /usr/bin/zenity ]; then
-	echo -e "\t\t\n\nSetting Up...Zenity\n\t\t Please Wait...\n"
-	sleep 2
-	sudo apt install zenity --y
-fi
+# - ### ZEN IS GONE ####
 
-if [ ! -e /usr/bin/tree ]; then
-	echo -e "\t\t\n\nSetting Up...tree\n\t\t Please Wait...\n"
-	sleep 2
-	sudo apt install tree --y
-fi
-
-if [ ! -e /usr/bin/openssl ]; then
+if [ ! -e $PREFIX/bin/openssl ]; then
 	echo -e "\t\t\n\nSetting Up...OpenSSL\n\t\t Please Wait...\n"
-	sleep 2
-	sudo apt install openssl --y
+	sleep 3
+	apt install openssl --y
 fi
 
-## clear
+# - # clear
 
 #__colour__
 cyan='\e[0;36m'
@@ -78,12 +84,11 @@ echo -e "\t\t      lNMMMMO:'',,,,,,,,'':OMMMMXc      "
 echo -e "\t\t        ,xNMMMWOdlc::cldONMMMNx,        "
 echo -e "\t\t           .:dOXWMMMMMMWXOd:.           "
 echo -e "\t\t                 ..''..                 "
-echo -e "\t\t                              "$cyan"Shazza-Works__V0.1$rs"
+echo -e "\t\t                              "$cyan"Shazza-Works__V0.1__4>_TERMUX$rs"
 
 sleep 2
 
-#===XX============================================== INFO =======================================================
-function allinfo {           ############CHANGE MAKE BETTER#######!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function allinfo {
 echo -e "$orange\n\t\t ⛑  N.B. When doing$yellow ALL_FILES$orange in the PWD there are a few things to note...!
         \tALL files WILL be encrypted with the selected password and this will also recurse
         \tinto any dirs and will encrypt all the files inside but not calling script (this program)
@@ -91,7 +96,6 @@ echo -e "$orange\n\t\t ⛑  N.B. When doing$yellow ALL_FILES$orange in the PWD t
         \t << Note__You Will Be Asked 2x For Pass -- Pls Don't Forget As No Way Back And Not My Fault!!! >>$rs"
 }
 
-#===XX========================================== Block Cipher ===================================================
 function block {
 echo -e "$yellow\n\t 🔀 Choose Your Encryption>\n\n$orange"
 select a in `echo "-aes-128-cbc -aes-192-cbc -aes-256-cbc -aes128 -aes192 -aes256 -aria-128-cbc -aria-192-cbc -aria-256-cbc -aria128 -aria192 -aria256 -bf-cbc -blowfish
@@ -102,7 +106,6 @@ select a in `echo "-aes-128-cbc -aes-192-cbc -aes-256-cbc -aes128 -aes192 -aes25
 done
 }
 
-#==================================================== Encrypt ===================================================
 function encrypt {
 echo
 read -s -p "What Password To Use?" secret # ADD A PASS CHECK !!!
@@ -127,7 +130,6 @@ else
 fi
 }
 
-#============================================== Decrypt ===========================================================
 function decrypt {
 echo
 read -s -p "What Password To Use?" secret # ADD A PASS CHECK !!!
@@ -159,7 +161,6 @@ else
 fi
 }
 
-#========================================================== LOGIC ================================================
 function start {
 echo -e "$yellow\n\tSelect You Task...\n$rs"
 select b in "Encrypt" "Decrypt"; do
@@ -207,8 +208,6 @@ select b in "Encrypt" "Decrypt"; do
 	fi
 done
 }
-
-#============================================================ END =================================================
 
 ## MAIN ##
 start

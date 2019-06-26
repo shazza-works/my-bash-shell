@@ -1,3 +1,4 @@
+#!/bin/bash
 #Not My Cod3 !
 #_____________________
    #!/bin/bash

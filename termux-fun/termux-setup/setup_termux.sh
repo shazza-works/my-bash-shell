@@ -18,3 +18,9 @@ echo -e "\n\nSetting Python PATH for termux"
 echo "export /data/data/com.termux/files/usr/lib/python2.7/site-packages/:/data/data/com.termux/files/usr/lib/python3.7/site-packages/" >> $HOME/.bash_profile
 sleep 3
 exit
+#
+#
+#
+# Need To Add A Lot More
+#
+#
