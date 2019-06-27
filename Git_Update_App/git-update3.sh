@@ -12,6 +12,9 @@
 #NEED TO ADD ASK USER FOR USERNAME OF ACT.....!!!! YOU NEED TO CHANGE			[Y]done
 # ONLY TIME WON'T WORK IS IS YOU HAVE NOT SET; $ git config --global user.email "Da_Shazza"
 # and the $ git config --global user.name "Shazza-Works"
+#
+# <<Want to add option for add and remove new and old gits etc>>
+#
 echo ""
 echo -e "\e[91m ____ _ ___          ___  ___  ____ ___ ____     "
 echo -e "\e[91m | __ |  |  __  |  | |__] |  \ |__|  |  |___     "
