@@ -9,6 +9,10 @@
 ## TREE ALSO FOR RECURS OPT---  tree -ifR full dir -r print with long fn
 ## MAKE INSTALL OPTION AND MOVE IT TO /USR/BIN AND INSTALL TOOLS NEEDED!
 # +++++++
+#
+# WANT TO ADD SOON....
+# ++ Make so ask for all files -R <> All files in PWD <> Or SINGLE File in PWD ++ #
+#
 if [[ $1 == "--remove" ]]; then
 	rm -rf /usr/bin/shazzafile
 	echo -e "\t\t\n Shazza-File Has Now Been REMOVED!"
